@@ -401,12 +401,29 @@
         font-size: 1.35rem;
       }
     }
+    .fiction-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: #fff;
+  background: #555;
+  border-radius: 2px;
+  letter-spacing: 0.06em;
+  font-family: sans-serif;
+}
   </style>
 </head>
 <body>
+  <!-- ▼ ここを追加（<body>の直後） -->
+<div style="position:sticky;top:0;z-index:9999;background:#1a1a1a;color:#f5c842;text-align:center;padding:7px 16px;font-size:0.82rem;letter-spacing:0.08em;font-family:sans-serif;">
+  ⚠ FICTIONAL PRESS ｜ このニュースサイトは創作作品「偽りの執刀医と消された告発」の演出です
+</div>
+<!-- ▲ ここまで -->
+<div class="topbar">
   <div class="topbar">
     <div class="topbar-inner">
-      <div>地域に根ざした報道を、丁寧に。</div>
+<div>記録は消えない。誰かが見ている。</div>。</div>
       <div>更新日：2026年4月18日</div>
     </div>
   </div>
@@ -449,6 +466,7 @@
               <span class="category">学校</span>
               <span>編集部</span>
               <span class="focus-tag">注目</span>
+               <span class="fiction-tag">劇中記事</span> 
             </div>
             <h2 class="lead-title">
               <a href="https://ryosukeucchi0112-boop.github.io/news-article-renji/">
@@ -472,6 +490,7 @@
               <span>三浦さやか</span>
               <span class="edited">※ 4月11日 18:40 一部更新</span>
               <span class="focus-tag">注目</span>
+               <span class="fiction-tag">劇中記事</span> 
             </div>
             <h3>
               <a href="https://ryosukeucchi0112-boop.github.io/news-article-mio/index.html">
@@ -545,6 +564,7 @@
               <span class="category">医療</span>
               <span>三浦さやか</span>
               <span class="focus-tag">注目</span>
+               <span class="fiction-tag">劇中記事</span> 
             </div>
             <h3>
               <a href="https://ryosukeucchi0112-boop.github.io/news-article-naruse/">
@@ -570,6 +590,7 @@
             <li>
               <a href="https://ryosukeucchi0112-boop.github.io/news-article-mio/index.html">
                 <span class="related-date">2026年4月10日 / 事件</span>
+                 <span class="fiction-tag">劇中記事</span> 
                 <span class="related-title">私立星浜学園の女子生徒が校内で転落、病院に搬送、未だ意識戻らず</span>
               </a>
             </li>
@@ -594,12 +615,14 @@
             <li>
               <a href="https://ryosukeucchi0112-boop.github.io/news-article-renji/">
                 <span class="related-date">2026年2月28日 / 学校</span>
+                 <span class="fiction-tag">劇中記事</span> 
                 <span class="related-title">私立星浜学園、16年ぶり甲子園出場！！！　主将・黒崎蓮司「支えてくれた人たちに感謝」</span>
               </a>
             </li>
             <li>
               <a href="https://ryosukeucchi0112-boop.github.io/news-article-naruse/">
                 <span class="related-date">2026年1月18日 / 医療</span>
+                 <span class="fiction-tag">劇中記事</span> 
                 <span class="related-title">女子高校生死亡、点滴後に容体急変　病院対応に疑問</span>
               </a>
             </li>
@@ -619,12 +642,16 @@
       </aside>
     </div>
   </main>
-
-  <footer class="site-footer">
-    <div class="site-footer-inner">
-      <div>三浦新聞</div>
-      <div>© 2026 Miura Shimbun</div>
+<footer class="site-footer">
+  <div class="site-footer-inner" style="flex-direction:column;gap:10px;">
+    <div style="font-size:0.78rem;color:#888;line-height:1.8;max-width:760px;">
+      このニュースサイトおよび掲載記事は、創作作品「届かなかった声」の演出として制作されたものです。新聞社・編集部・記者名・記事内容・更新時刻・取材対象はすべて架空であり、実在の報道機関・報道記事とは一切関係ありません。
     </div>
-  </footer>
+    <div style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:8px;">
+      <div>三浦新聞（架空）</div>
+      <div>© 2026 Fictional ARG Production</div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>  
