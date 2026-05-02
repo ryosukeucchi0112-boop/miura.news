@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>三浦新聞 | 地域のニュース</title>
+  <title>三浦新聞 | 劇中ニュース一覧</title>
   <meta
     name="description"
-    content="三浦新聞は、地域の出来事を丁寧に伝える地方ニュースサイトです。事件、社会、地域、学校に関するニュースを掲載しています。"
+    content="三浦新聞は、創作作品『届かなかった通報』内に登場する架空のニュースサイトです。掲載されている人物・団体・記事内容はすべて架空です。"
   />
   <style>
     :root {
@@ -18,6 +18,8 @@
       --accent: #6a1f1f;
       --accent-dark: #2d3e57;
       --hover: #f2efea;
+      --notice-bg: #24211d;
+      --notice-ink: #d8c27a;
       --max: 1180px;
     }
 
@@ -46,6 +48,24 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    .fiction-notice {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: var(--notice-bg);
+      color: var(--notice-ink);
+      text-align: center;
+      padding: 6px 14px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      font-family:
+        "Hiragino Sans",
+        "Yu Gothic",
+        "YuGothic",
+        sans-serif;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .topbar {
@@ -99,6 +119,23 @@
       margin: 10px 0 0;
       font-size: 0.92rem;
       color: var(--muted);
+    }
+
+    .site-fiction-note {
+      max-width: 820px;
+      margin: 18px auto 0;
+      padding: 10px 14px;
+      border: 1px solid rgba(106, 31, 31, 0.22);
+      background: #fbfaf7;
+      color: #5e5146;
+      font-size: 0.82rem;
+      line-height: 1.7;
+      text-align: left;
+      font-family:
+        "Hiragino Sans",
+        "Yu Gothic",
+        "YuGothic",
+        sans-serif;
     }
 
     .global-nav {
@@ -217,6 +254,27 @@
       background: var(--accent-dark);
       border-radius: 999px;
       letter-spacing: 0.06em;
+      font-family:
+        "Hiragino Sans",
+        "Yu Gothic",
+        "YuGothic",
+        sans-serif;
+    }
+
+    .fiction-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      line-height: 1.4;
+      color: #fff;
+      background: #555;
+      border-radius: 2px;
+      letter-spacing: 0.06em;
+      font-family:
+        "Hiragino Sans",
+        "Yu Gothic",
+        "YuGothic",
+        sans-serif;
     }
 
     .lead-title {
@@ -332,6 +390,7 @@
 
     .related-title {
       display: block;
+      margin-top: 5px;
       font-size: 0.94rem;
       line-height: 1.6;
     }
@@ -368,6 +427,18 @@
       flex-wrap: wrap;
     }
 
+    .footer-disclaimer {
+      font-size: 0.78rem;
+      color: #777;
+      line-height: 1.8;
+      max-width: 820px;
+      font-family:
+        "Hiragino Sans",
+        "Yu Gothic",
+        "YuGothic",
+        sans-serif;
+    }
+
     @media (max-width: 900px) {
       .layout {
         grid-template-columns: 1fr;
@@ -383,8 +454,20 @@
     }
 
     @media (max-width: 600px) {
+      .fiction-notice {
+        position: static;
+        padding: 7px 10px;
+        font-size: 0.72rem;
+        line-height: 1.6;
+      }
+
       .site-header-inner {
         padding: 20px 16px 16px;
+      }
+
+      .site-fiction-note {
+        margin-top: 14px;
+        font-size: 0.78rem;
       }
 
       .page {
@@ -401,29 +484,16 @@
         font-size: 1.35rem;
       }
     }
-    .fiction-tag {
-  display: inline-block;
-  padding: 2px 8px;
-  font-size: 0.72rem;
-  line-height: 1.4;
-  color: #fff;
-  background: #555;
-  border-radius: 2px;
-  letter-spacing: 0.06em;
-  font-family: sans-serif;
-}
   </style>
 </head>
 <body>
-  <!-- ▼ ここを追加（<body>の直後） -->
-<div style="position:sticky;top:0;z-index:9999;background:#1a1a1a;color:#f5c842;text-align:center;padding:7px 16px;font-size:0.82rem;letter-spacing:0.08em;font-family:sans-serif;">
-  ⚠ FICTIONAL PRESS ｜ このニュースサイトは創作作品「偽りの執刀医と消された告発」の演出です
-</div>
-<!-- ▲ ここまで -->
-<div class="topbar">
+  <div class="fiction-notice">
+    FICTIONAL PRESS ｜ このページは創作作品内の架空ニュースサイトです
+  </div>
+
   <div class="topbar">
     <div class="topbar-inner">
-<div>記録は消えない。誰かが見ている。</div>。</div>
+      <div>記録は消えない。誰かが見ている。</div>
       <div>更新日：2026年4月18日</div>
     </div>
   </div>
@@ -433,7 +503,11 @@
       <div class="site-name-wrap">
         <p class="site-kicker">LOCAL NEWS OF MIURA AREA</p>
         <h1 class="site-title">三浦新聞</h1>
-        <p class="site-sub">地域の出来事を落ち着いた視点で伝える地方ニュースサイト</p>
+        <p class="site-sub">地域の出来事を静かに記録する、劇中の架空ニュースサイト</p>
+        <div class="site-fiction-note">
+          このページは創作作品「届かなかった通報」の演出として制作された架空ニュースサイトです。
+          新聞社・編集部・記者名・記事内容・取材対象はすべて架空であり、実在の報道機関・学校・医療機関・行政機関とは関係ありません。
+        </div>
       </div>
     </div>
 
@@ -453,7 +527,7 @@
   <main class="page">
     <div class="section-head">
       <h2>ニュース一覧</h2>
-      <p>事件・地域・学校に関する主な記事</p>
+      <p>劇中に登場する事件・地域・学校に関する主な記事</p>
     </div>
 
     <div class="layout">
@@ -466,11 +540,11 @@
               <span class="category">学校</span>
               <span>編集部</span>
               <span class="focus-tag">注目</span>
-               <span class="fiction-tag">劇中記事</span> 
+              <span class="fiction-tag">劇中記事</span>
             </div>
             <h2 class="lead-title">
               <a href="https://ryosukeucchi0112-boop.github.io/news-article-renji/">
-                私立星浜学園、16年ぶり甲子園出場！！！　主将・黒崎蓮司「支えてくれた人たちに感謝」
+                私立星浜学園、16年ぶり甲子園出場　主将・黒崎蓮司「支えてくれた人たちに感謝」
               </a>
             </h2>
             <p class="lead-summary">
@@ -490,20 +564,20 @@
               <span>三浦さやか</span>
               <span class="edited">※ 4月11日 18:40 一部更新</span>
               <span class="focus-tag">注目</span>
-               <span class="fiction-tag">劇中記事</span> 
+              <span class="fiction-tag">劇中記事</span>
             </div>
             <h3>
               <a href="https://ryosukeucchi0112-boop.github.io/news-article-mio/index.html">
-                私立星浜学園の女子生徒が校内で転落、病院に搬送、未だ意識戻らず
+                私立星浜学園の女子生徒が校内で転落、病院に搬送　意識戻らず
               </a>
             </h3>
             <p>
-              市内の私立星浜学園高等部で、女子生徒が校内の階段付近で倒れているのが見つかり、
-              市内の病院へ搬送された。関係者によると、搬送後も意識は戻っていないという。
+              私立星浜学園高等部で、女子生徒が校内の階段付近で倒れているのが見つかり、
+              星浜市内の病院へ搬送された。関係者によると、搬送後も意識は戻っていないという。
               学校側は当時の状況について確認を進めている。
             </p>
             <div class="card-actions">
-              <a href="https://ryosukeucchi0112-boop.github.io/news-article-mio" class="readmore">記事を読む</a>
+              <a href="https://ryosukeucchi0112-boop.github.io/news-article-mio/index.html" class="readmore">記事を読む</a>
             </div>
           </article>
 
@@ -512,15 +586,16 @@
               <span>2026年4月8日</span>
               <span class="category">地域</span>
               <span>編集部</span>
+              <span class="fiction-tag">劇中記事</span>
             </div>
             <h3>
               <a href="#">
-                駅前再整備で歩道改修始まる　通学時間帯の安全確保へ
+                星浜駅前再整備で歩道改修始まる　通学時間帯の安全確保へ
               </a>
             </h3>
             <p>
-              市中心部の駅前エリアで歩道改修工事が始まった。市は通学時間帯の安全確保につなげたい考えで、
-              周辺では一部通行規制も行われている。
+              星浜市中心部の駅前エリアで歩道改修工事が始まった。
+              市は通学時間帯の安全確保につなげたい考えで、周辺では一部通行規制も行われている。
             </p>
           </article>
 
@@ -529,15 +604,16 @@
               <span>2026年4月7日</span>
               <span class="category">医療</span>
               <span>編集部</span>
+              <span class="fiction-tag">劇中記事</span>
             </div>
             <h3>
               <a href="#">
-                城南記念総合病院、ゴールデンウィーク中の一部区画の封鎖について
+                城南記念総合病院、連休期間中に一部区画を閉鎖　設備点検で
               </a>
             </h3>
             <p>
-              城南記念総合病院は、館内設備点検に伴い、ゴールデンウィーク期間中に一部区画を封鎖すると発表した。
-              外来患者や来院者に対して、当日は院内案内表示に従うよう呼びかけている。
+              城南記念総合病院は、館内設備点検に伴い、連休期間中に一部区画を閉鎖すると発表した。
+              来院者に対して、当日は院内案内表示に従うよう呼びかけている。
             </p>
           </article>
 
@@ -546,14 +622,15 @@
               <span>2026年4月5日</span>
               <span class="category">社会</span>
               <span>編集部</span>
+              <span class="fiction-tag">劇中記事</span>
             </div>
             <h3>
               <a href="#">
-                市教育委員会、相談体制の周知強化へ　新学期前に案内配布
+                星浜市教育課、相談体制の周知強化へ　新学期前に案内配布
               </a>
             </h3>
             <p>
-              市教育委員会は新学期を前に、生徒や保護者向けの相談窓口案内を各校へ配布した。
+              星浜市教育課は新学期を前に、生徒や保護者向けの相談窓口案内を各校へ配布した。
               学校生活に関する不安や悩みへの早期対応を目指すとしている。
             </p>
           </article>
@@ -564,7 +641,7 @@
               <span class="category">医療</span>
               <span>三浦さやか</span>
               <span class="focus-tag">注目</span>
-               <span class="fiction-tag">劇中記事</span> 
+              <span class="fiction-tag">劇中記事</span>
             </div>
             <h3>
               <a href="https://ryosukeucchi0112-boop.github.io/news-article-naruse/">
@@ -572,7 +649,7 @@
               </a>
             </h3>
             <p>
-              市内病院に搬送された女子高校生が処置後に急変し、その後死亡した件で、
+              星浜市内の病院に搬送された女子高校生が処置後に急変し、その後死亡した件で、
               遺族が病院側の説明に疑問を示している。経過説明のあり方などをめぐり、
               地域でも関心が高まっている。
             </p>
@@ -590,39 +667,42 @@
             <li>
               <a href="https://ryosukeucchi0112-boop.github.io/news-article-mio/index.html">
                 <span class="related-date">2026年4月10日 / 事件</span>
-                 <span class="fiction-tag">劇中記事</span> 
-                <span class="related-title">私立星浜学園の女子生徒が校内で転落、病院に搬送、未だ意識戻らず</span>
+                <span class="fiction-tag">劇中記事</span>
+                <span class="related-title">私立星浜学園の女子生徒が校内で転落、病院に搬送　意識戻らず</span>
               </a>
             </li>
             <li>
               <a href="#">
                 <span class="related-date">2026年4月8日 / 地域</span>
-                <span class="related-title">駅前再整備で歩道改修始まる　通学時間帯の安全確保へ</span>
+                <span class="fiction-tag">劇中記事</span>
+                <span class="related-title">星浜駅前再整備で歩道改修始まる　通学時間帯の安全確保へ</span>
               </a>
             </li>
             <li>
               <a href="#">
                 <span class="related-date">2026年4月7日 / 医療</span>
-                <span class="related-title">城南記念総合病院、ゴールデンウィーク中の一部区画の封鎖について</span>
+                <span class="fiction-tag">劇中記事</span>
+                <span class="related-title">城南記念総合病院、連休期間中に一部区画を閉鎖　設備点検で</span>
               </a>
             </li>
             <li>
               <a href="#">
                 <span class="related-date">2026年4月5日 / 社会</span>
-                <span class="related-title">市教育委員会、相談体制の周知強化へ　新学期前に案内配布</span>
+                <span class="fiction-tag">劇中記事</span>
+                <span class="related-title">星浜市教育課、相談体制の周知強化へ　新学期前に案内配布</span>
               </a>
             </li>
             <li>
               <a href="https://ryosukeucchi0112-boop.github.io/news-article-renji/">
                 <span class="related-date">2026年2月28日 / 学校</span>
-                 <span class="fiction-tag">劇中記事</span> 
-                <span class="related-title">私立星浜学園、16年ぶり甲子園出場！！！　主将・黒崎蓮司「支えてくれた人たちに感謝」</span>
+                <span class="fiction-tag">劇中記事</span>
+                <span class="related-title">私立星浜学園、16年ぶり甲子園出場　主将・黒崎蓮司「支えてくれた人たちに感謝」</span>
               </a>
             </li>
             <li>
               <a href="https://ryosukeucchi0112-boop.github.io/news-article-naruse/">
                 <span class="related-date">2026年1月18日 / 医療</span>
-                 <span class="fiction-tag">劇中記事</span> 
+                <span class="fiction-tag">劇中記事</span>
                 <span class="related-title">女子高校生死亡、点滴後に容体急変　病院対応に疑問</span>
               </a>
             </li>
@@ -633,25 +713,26 @@
           <h3>編集部より</h3>
           <div class="pickup">
             <p>
-              事件や学校、地域医療に関する話題は、
-              <strong>経過報道を含めて継続的に掲載</strong>しています。
-              関連記事は一覧からたどれます。
+              本ページは創作作品内の導線として構成された架空ニュース一覧です。
+              <strong>掲載内容は現実の報道・事件・医療機関の案内ではありません。</strong>
             </p>
           </div>
         </section>
       </aside>
     </div>
   </main>
-<footer class="site-footer">
-  <div class="site-footer-inner" style="flex-direction:column;gap:10px;">
-    <div style="font-size:0.78rem;color:#888;line-height:1.8;max-width:760px;">
-      このニュースサイトおよび掲載記事は、創作作品「届かなかった声」の演出として制作されたものです。新聞社・編集部・記者名・記事内容・更新時刻・取材対象はすべて架空であり、実在の報道機関・報道記事とは一切関係ありません。
+
+  <footer class="site-footer">
+    <div class="site-footer-inner" style="flex-direction:column;gap:10px;">
+      <div class="footer-disclaimer">
+        このニュースサイトおよび掲載記事は、創作作品「届かなかった通報」の演出として制作されたものです。
+        新聞社・編集部・記者名・記事内容・更新時刻・取材対象はすべて架空であり、実在の報道機関・学校・医療機関・行政機関・事件とは一切関係ありません。
+      </div>
+      <div style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:8px;">
+        <div>三浦新聞（架空）</div>
+        <div>© 2026 Fictional ARG Production</div>
+      </div>
     </div>
-    <div style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:8px;">
-      <div>三浦新聞（架空）</div>
-      <div>© 2026 Fictional ARG Production</div>
-    </div>
-  </div>
-</footer>
+  </footer>
 </body>
-</html>  
+</html>
